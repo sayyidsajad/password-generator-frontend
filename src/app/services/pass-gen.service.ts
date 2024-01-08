@@ -7,11 +7,9 @@ import { Observable } from 'rxjs';
 })
 export class PassGenService {
 
-  private apiUrl = 'http://localhost:3000/';
-
   constructor(private _http: HttpClient) { }
 
   getData(checkboxValues: any): Observable<any> {
-    return this._http.post(`${this.apiUrl}`, checkboxValues);
+    return this._http.post('', checkboxValues);
   }
 }
